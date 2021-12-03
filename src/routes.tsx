@@ -9,7 +9,7 @@ import {
   Exchanges,
 } from "./components";
 
-const Main = () => {
+const Router = () => {
   return (
     <Layout>
       <div className="routes">
@@ -25,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Router;

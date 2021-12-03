@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./routes";
+import Router from "./routes";
 import { Nav, Footer } from "./components";
 import "./app.css";
 
@@ -11,7 +11,7 @@ const App = () => {
           <Nav />
         </div>
         <div className="main">
-          <Main />
+          <Router />
         </div>
       </div>
       <div className="footer">
