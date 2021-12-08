@@ -5,3 +5,5 @@ export { default as News } from "./news";
 export { default as Exchanges } from "./exchanges";
 export { default as Home } from "./home";
 export { default as Footer } from "./footer";
+export { default as Loader } from "./loader";
+export { default as LineChart } from "./line-chart";

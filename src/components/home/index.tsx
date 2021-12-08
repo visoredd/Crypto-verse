@@ -1,7 +1,7 @@
 import React from "react";
 import millify from "millify";
 import { Typography, Row, Col, Statistic } from "antd";
-import { News, CryptoCurrencies } from "../";
+import { News, CryptoCurrencies, Loader } from "../";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
 
@@ -11,7 +11,12 @@ const Home = () => {
   const { data, isFetching } = useGetCryptosQuery(100);
 
   const globalStats = data?.data?.stats;
-  if (isFetching && !globalStats) return <>... Loading</>;
+  if (isFetching && !globalStats)
+    return (
+      <>
+        <Loader />
+      </>
+    );
 
   return (
     <>
@@ -64,7 +69,7 @@ const Home = () => {
           <Link to="/news">Show more</Link>
         </Title>
       </div>
-      <News />
+      <News simplified />
     </>
   );
 };
